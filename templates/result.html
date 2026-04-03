@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% set active_nav = 'home' %}
+
+{% block content %}
+<div class="result-bg">
+  <div class="result-header">
+    <a href="{{ url_for('home') }}" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+    <div class="result-title">{{ query | title }}</div>
+    <div class="hicon"><i class="fa-regular fa-bell"></i></div>
+  </div>
+
+  <!-- 2 Column Layout -->
+  <div class="result-layout">
+
+    <!-- LEFT: News Cards -->
+    <div class="result-main">
+
+      <!-- Category Pills -->
+      <div class="result-pills">
+        <div class="rpill on">All</div>
+        <div class="rpill">Politics</div>
+        <div class="rpill">Technology</div>
+        <div class="rpill">Sports</div>
+      </div>
+
+      <!-- Section Title -->
+      <div class="news-sec-row">
+        <div class="news-sec-title">{{ query | title }}</div>
+        <div class="news-sec-all">See all</div>
+      </div>
+
+      <!-- Trend Chart -->
+      <div class="trend-chart">{{ chart_html | safe }}</div>
+
+      <!-- News Cards -->
+      {% if articles %}
+        {% for article in articles %}
+        <a href="{{ url_for('article_page', index=loop.index0) }}" class="news-card-link-wrap">
+          <div class="news-card">
+            <div class="news-card-body">
+              <div class="news-meta">
+                <span class="news-source">{{ article.metadata.source_name }}</span>
+                <span class="news-dot">·</span>
+                <span class="news-time">{{ article.metadata.publishedAt[:10] }}</span>
+                <span class="news-dot">·</span>
+                {% if article.metadata.sentiment == "Positive" %}
+                  <span class="sentiment-badge positive">🟢 Positive</span>
+                {% elif article.metadata.sentiment == "Negative" %}
+                  <span class="sentiment-badge negative">🔴 Negative</span>
+                {% else %}
+                  <span class="sentiment-badge neutral">🟡 Neutral</span>
+                {% endif %}
+              </div>
+              <div class="news-card-title">{{ article.page_content.split('\n\n', 1)[-1] }}...</div>
+              <div class="news-card-author">
+                {% if article.metadata.author %}By {{ article.metadata.author[:30] }}{% endif %}
+                {% if article.metadata.url %}
+                  <a href="{{ article.metadata.url }}" target="_blank" class="news-card-link" onclick="event.stopPropagation()">Read more</a>
+                {% endif %}
+              </div>
+            </div>
+            <div class="news-card-img"><i class="fa-regular fa-newspaper"></i></div>
+          </div>
+        </a>
+        {% endfor %}
+
+        <!-- Pagination -->
+      <div class="pagination">
+         {% if page > 1 %}
+            <a href="{{ url_for('search') }}?page={{ page - 1 }}&query={{ query }}" class="page-btn">←  Previous</a>
+         {% endif %}
+
+         <span class="page-info">{{ page }} / {{ total_pages }}</span>
+
+         {% if page < total_pages %}
+
+            <a href="{{ url_for('search') }}?page={{ page + 1 }}&query={{ query }}" class="page-btn">Next →</a>
+         {% endif %}
+      </div>
+
+     {% else %}
+        <div class="no-news">No articles found 📰</div>
+    {% endif %}
+</div>
+
+    <!-- RIGHT SIDEBAR: AI Summary + Q&A -->
+    <div class="result-sidebar">
+      <!-- AI Summary Card -->
+      <div class="summary-card">
+        <div class="summary-badge"><i class="fa-solid fa-bolt"></i> AI Summary</div>
+        <div class="summary-headline">Breaking News Now</div>
+        <div class="summary-text">{{ answer }}</div>
+        <div class="summary-tag">Stay informed with real-time updates</div>
+      </div>
+
+      <!-- Q&A Button -->
+      <a href="{{ url_for('qa_page') }}" class="qa-btn">
+        <i class="fa-regular fa-message"></i> Ask Questions About This Topic
+      </a>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.querySelectorAll('.rpill').forEach(p => {
+  p.addEventListener('click', function() {
+    document.querySelectorAll('.rpill').forEach(x => x.classList.remove('on'));
+    this.classList.add('on');
+  });
+});
+</script>
+{% endblock %}

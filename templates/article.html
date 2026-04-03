@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% set active_nav = 'home' %}
+
+{% block content %}
+<div class="result-bg">
+
+  <!-- Header -->
+  <div class="result-header">
+    <a href="javascript:history.back()" class="back-btn">
+      <i class="fa-solid fa-arrow-left"></i>
+    </a>
+    <div class="result-title">Article Detail</div>
+    <div class="hicon"><i class="fa-regular fa-bell"></i></div>
+  </div>
+
+  <!-- Article Hero Card -->
+  <div class="article-hero">
+    <!-- Sentiment Badge Top -->
+    <div class="article-sentiment-row">
+      {% if article.sentiment == "Positive" %}
+        <span class="sentiment-badge positive">🟢 Positive</span>
+      {% elif article.sentiment == "Negative" %}
+        <span class="sentiment-badge negative">🔴 Negative</span>
+      {% else %}
+        <span class="sentiment-badge neutral">🟡 Neutral</span>
+      {% endif %}
+      <span class="article-category">News</span>
+    </div>
+
+    <!-- Source + Date -->
+    <div class="article-source-row">
+      <div class="article-source-dot"></div>
+      <span class="article-source-name">{{ article.source }}</span>
+      <span class="news-dot">·</span>
+      <span class="article-date">{{ article.date[:10] }}</span>
+    </div>
+  </div>
+
+  <!-- Content Card -->
+  <div class="article-card">
+    <div class="article-content">
+    {{ article.content.split('\n\n', 1)[-1] if '\n\n' in article.content else article.content }}
+  </div>
+
+    <!-- Divider -->
+    <div class="article-divider"></div>
+
+    <!-- Author Row -->
+    {% if article.author %}
+    <div class="article-author-row">
+      <div class="article-author-icon">
+        <i class="fa-regular fa-user"></i>
+      </div>
+      <div>
+        <div class="article-author-label">Written by</div>
+        <div class="article-author-name">{{ article.author }}</div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Read Original Button -->
+    {% if article.url %}
+    <a href="{{ article.url }}" target="_blank" class="article-read-btn">
+      <span>Read Full Article</span>
+      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+    {% endif %}
+  </div>
+
+  <!-- Q&A Card -->
+  <div class="article-qa-card">
+    <!-- Header -->
+    <div class="article-qa-header">
+      <div class="article-qa-icon">
+        <i class="fa-regular fa-message"></i>
+      </div>
+      <div>
+        <div class="article-qa-title">Ask About This Article</div>
+        <div class="article-qa-sub">Get AI answers based on this article</div>
+      </div>
+    </div>
+    
+   {% if answer %}
+   <div class="qa-answer-wrap">
+   <div class="qa-q-badge"><i class="fa-regular fa-circle-question"></i> Your Question</div>
+   <div class="qa-q-text">{{ question }}</div>
+   <div class="qa-a-badge"><i class="fa-solid fa-robot"></i> AI Answer</div>
+   <div class="qa-a-text">{{ answer }}</div>
+    </div>
+{% endif %}
+  
+    <!-- Suggested Questions -->
+    <div class="article-qa-suggestions">
+      <div class="article-sug" onclick="fillQuestion('What is this article about?')">
+        What is this article about?
+      </div>
+      <div class="article-sug" onclick="fillQuestion('What are the key points?')">
+        What are the key points?
+      </div>
+      <div class="article-sug" onclick="fillQuestion('What is the impact of this news?')">
+        What is the impact?
+      </div>
+    </div>
+
+    <!-- Input -->
+    <!-- BAAD MEIN (sahi) - same article page par rahega: -->
+    <form id="qaForm" action="{{ url_for('article_page', index=article_index) }}" method="POST">
+      <input type="hidden" name="question" id="hiddenQuestion">
+      <div class="article-qa-input-wrap">
+        <input type="text"
+               id="articleQuestion"
+               placeholder="Ask anything about this article..."
+               class="article-qa-input">
+        <button type="button" class="article-qa-send" onclick="submitQuestion()">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function submitQuestion() {
+  const q = document.getElementById('articleQuestion').value.trim();
+  if (!q) return;
+  document.getElementById('hiddenQuestion').value = q;
+  document.getElementById('qaForm').submit();  // specific form submit karega
+}
+
+function fillQuestion(text) {
+  document.getElementById('articleQuestion').value = text;
+  document.getElementById('articleQuestion').focus();
+}
+
+document.getElementById('articleQuestion').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') submitQuestion();
+});
+</script>
+{% endblock %}

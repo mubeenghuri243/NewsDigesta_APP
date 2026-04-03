@@ -1,0 +1,136 @@
+
+Claude Code users hitting usage limits 'way faster than expected'
+20 hours ago
+
+Share
+
+Save
+
+Add as preferred on Google
+Richard Morris
+Technology reporter
+Getty Images A logo of Claude on an iPhone, with a background of the company's star-like logoGetty Images
+Anthropic says it is looking to resolve an issue which is blocking users of its AI coding tool.
+
+Claude Code, the AI-powered helper for writing computer code, has become popular in recent months.
+
+The company announced on Reddit it was investigating an issue where usage limits were being hit faster than expected.
+
+Customers buy tokens to use AI services - but the amount of tokens needed for each task is sometimes opaque.
+
+Anthropic said fixing this was the "top priority" for the team.
+
+Claude users commented under the post on Reddit, with one user saying they hit the token limit "much later" on their free account compared to their $100 (£75) a month paid account.
+
+Another user, talking about bugs that can form in the code created, commented "One session in a loop can drain your daily budget in minutes".
+
+And another comment stated that the impact wasn't just on Claude Code, saying "A simple one sentence reply to a conversation just took me from 59% usage to 100%. How??"
+
+
+
+Just last week, Anthropic introduced peak-hour throttling of its services on Claude, meaning that tokens will get consumed more quickly when demand for the service is higher.
+
+Software developers can use Claude Code and other similar applications as part of their daily workflow to help with specific tasks. Any issues with the service can disrupt their work.
+
+A Claude Pro subscription costs users $20 a month. Increasing tiers for higher usage can cost $100 or even $200 per month. The company also offers business pricing for larger organisations.
+
+Anthropic recently accidentally released part of its internal source code for Claude Code due to "human error".
+
+An internal file with 500,000 lines of code was released on GitHub, a popular platform for developers.
+
+An Anthropic spokesperson said the release was caused by "human error, not a security breach," and that "no sensitive customer data or credentials were exposed or involved".
+
+Claude Code's source code was already partially known, as it had previously been reverse-engineered by independent developers. An earlier version of the source code had also been leaked in February 2025.
+
+Anthropic is currently in a legal battle with the US government over how its tools can be used by the Department of Defense.
+
+
+AI firm Anthropic seeks weapons expert to stop users from 'misuse'
+Judge rejects Pentagon's attempt to 'cripple' Anthropic
+AI system resorts to blackmail if told it will be removed
+A green promotional banner with black squares and rectangles forming pixels, moving in from the right. The text says: “Tech Decoded: The world’s biggest tech news in your inbox every Monday.”
+Sign up for our Tech Decoded newsletter to follow the world's top tech stories and trends. Outside the UK? Sign up here.
+
+Artificial intelligence
+Computer programming
+Related
+Palantir UK boss says it's up to militaries to decide how AI targeting is used in war
+Thousands lose their jobs in deep cuts at tech giant Oracle
+What could six fictional voters teach us about how social media really works?
+ADVERTISEMENT
+Soldiers 'excited' at largest military parachute drop in decade
+The training has been staged to show the UK's ability to deploy troops and equipment at short notice.
+Man who sexually assaulted girl 40 years ago jailed
+Jeffrey Fisher abused the victim starting when she was a child and has been given 12-year sentence.
+Rapist jailed for attack on 'vulnerable' man, 19, in Leeds
+Abdi Wahab Abdulla threatened him with a knife, raped him and attempted another attack, court hears.
+Man denies murdering two women and raping a third woman
+Simon Levy, 40, from Tottenham denies murdering Carmenza Valencia-Trujillo, 54, and Sheryl Wilkins, 39.
+Woman deported from China over Manx passport mix-up
+A woman from the Isle of Man says she was escorted back on to the plane by Chinese border guards.
+'Our daughters got on a school bus and never came home'
+Two families whose daughters were hit by a car after getting off a school bus tell their stories.
+More from the BBC
+20 Feb 2026
+Nine people are standing together in front of a black banner with gold writing on it which reads "the signature awards 2026". There are six men and one woman. The men are dresses in suits and ties, and the women are in dresses. In the centre is Manny Athwal, who is in a black suit with a white shirt and black dickie bow tie. He is holding a black trophy.
+AI and coding firm's 'pride' at business award
+Manny Athwal, chief executive and founder of the Wolverhampton firm, says the win is a huge milestone.
+
+16 Feb 2026
+A group of five boys all in blue hoodies holding a trophy made of Lego. They have mainly brown or dark hair and are all smiling.
+'Nail-biting' Lego victory gets boys to final
+The team End-Tech overcame 21 schools from as far away as Bradford to make the national final.
+
+28 Jan 2026
+Mann is stood outside a building with a water fountain and small tree behind him. He has a navy suit on and a white shirt. He has dark hair and a beard.
+AI and coding trainer to open new Dubai base
+The School of Coding and AI has a base in Wolverhampton as well as operating in Birmingham.
+
+6 Dec 2025
+Max holding his certificate 
+'A dream can become real,' says world record holder, 11
+Max has become the youngest male video game developer after his four-hour attempt in May.
+
+15 Oct 2025
+A red Raspberry Pi-branded mug sits in the foreground of a tech-focused workspace. Behind it, two (an adult and a child) are engaged with a computer screen. The adult has long grey hair and is helping the child with their work.
+Code club building skills for AI generation
+The educational charity says all children should have the opportunity to understand technology, no matter what their background.
+
+Home
+News
+Sport
+Business
+Technology
+Health
+Culture
+Arts
+Travel
+Earth
+Audio
+Video
+Live
+Weather
+BBC Shop
+BritBox
+BBC in other languages
+Follow BBC on:
+
+
+
+
+
+
+Terms of Use
+Subscription Terms
+About the BBC
+Privacy Policy
+Cookies
+Accessibility Help
+Contact the BBC
+Advertise with us
+Do not share or sell my info
+BBC.com Help & FAQs
+Content Index
+Set Preferred Source
+Copyright 2026 BBC. All rights reserved. The BBC is not responsible for the content of external sites. Read about our approach to external linking.
+

@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% set active_nav = 'home' %}
+
+{% block content %}
+
+<div class="home-bg">
+  <div class="home-header">
+    <div class="home-greeting">
+      <div class="greeting-sub">Good Morning 👋</div>
+      <div class="greeting-title">The News</div>
+    </div>
+    <div class="header-icons">
+      <div class="hicon"><i class="fa-solid fa-magnifying-glass"></i></div>
+      <div class="hicon"><i class="fa-regular fa-bell"></i></div>
+    </div>
+  </div>
+
+  <!-- Search Form -->
+
+  <form action="{{ url_for('search') }}" method="POST" class="search-form">
+    <div class="search-wrap">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="text" name="query" placeholder="Search news topics..." class="search-input" autocomplete="off" id="searchInput">
+      <button type="submit" class="search-go">Go</button>
+      <div class="suggestions-dropdown" id="suggestionsDropdown" role="listbox" aria-label="Search suggestions"></div>
+    </div>
+  </form>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const searchInput = document.getElementById('searchInput');
+  const suggestionsDropdown = document.getElementById('suggestionsDropdown');
+
+  async function fetchSuggestions(query) {
+    try {
+      const response = await fetch(`/suggestions?q=${encodeURIComponent(query)}`);
+      if (!response.ok) return [];
+      return await response.json();
+    } catch (err) {
+      console.error('Suggestion error:', err);
+      return [];
+    }
+  }
+
+  function clearSuggestions() {
+    suggestionsDropdown.innerHTML = '';
+    suggestionsDropdown.style.display = 'none';
+  }
+
+  function showSuggestions(items) {
+    if (!items || items.length === 0) {
+      clearSuggestions();
+      return;
+    }
+
+    suggestionsDropdown.innerHTML = '';
+    items.forEach((text) => {
+      const item = document.createElement('div');
+      item.className = 'suggestion-item';
+      item.textContent = text;
+      item.addEventListener('click', () => {
+        searchInput.value = text;
+        clearSuggestions();
+      });
+      suggestionsDropdown.appendChild(item);
+    });
+    suggestionsDropdown.style.display = 'block';
+  }
+
+  searchInput.addEventListener('input', async () => {
+    const q = searchInput.value.trim();
+    if (q.length < 2) {
+      clearSuggestions();
+      return;
+    }
+    const suggestions = await fetchSuggestions(q);
+    showSuggestions(suggestions);
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.search-wrap')) {
+      clearSuggestions();
+    }
+  });
+</script>
+{% endblock %} 
+

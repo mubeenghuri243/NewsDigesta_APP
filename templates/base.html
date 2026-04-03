@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NewsDigest</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="{{ url_for('home') }}" class="topnav-logo">
+      <i class="fa-regular fa-newspaper"></i>
+      <span>NewsDigest</span>
+    </a>
+    <div class="topnav-links">
+      <a href="{{ url_for('home') }}" class="tnl {% if active_nav == 'home' %}active{% endif %}">
+        <i class="fa-solid fa-house"></i> Home
+      </a>
+      <a href="{{ url_for('qa_page') }}" class="tnl {% if active_nav == 'qa' %}active{% endif %}">
+        <i class="fa-regular fa-message"></i> Q&A
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- CATEGORIES BAR -->
+<div class="cat-bar">
+  <div class="cat-bar-inner">
+    <form action="{{ url_for('search') }}" method="POST" style="display:contents">
+      <button type="submit" name="query" value="latest news" class="cbt cbt-green">
+        <i class="fa-regular fa-newspaper"></i> Updated
+      </button>
+    </form>
+    <form action="{{ url_for('search') }}" method="POST" style="display:contents">
+      <button type="submit" name="query" value="politics world" class="cbt cbt-orange">
+        <i class="fa-solid fa-landmark"></i> Politics
+      </button>
+    </form>
+    <form action="{{ url_for('search') }}" method="POST" style="display:contents">
+      <button type="submit" name="query" value="technology AI" class="cbt">
+        <i class="fa-solid fa-microchip"></i> Technology
+      </button>
+    </form>
+    <form action="{{ url_for('search') }}" method="POST" style="display:contents">
+      <button type="submit" name="query" value="sports highlights" class="cbt">
+        <i class="fa-solid fa-trophy"></i> Sports
+      </button>
+    </form>
+    <form action="{{ url_for('search') }}" method="POST" style="display:contents">
+      <button type="submit" name="query" value="world international news" class="cbt">
+        <i class="fa-solid fa-globe"></i> International
+      </button>
+    </form>
+    <form action="{{ url_for('search') }}" method="POST" style="display:contents">
+      <button type="submit" name="query" value="media entertainment" class="cbt">
+        <i class="fa-solid fa-photo-film"></i> Media
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- PAGE CONTENT -->
+<main class="page-main">
+  {% block content %}{% endblock %}
+</main>
+
+{% block scripts %}{% endblock %}
+</body>
+</html>

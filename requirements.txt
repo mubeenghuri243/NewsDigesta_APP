@@ -1,0 +1,13 @@
+flask 
+langchain
+faiss-cpu
+groq
+newsapi-python
+python-dotenv
+chromadb
+langchain-core
+langchain-community
+pypdf
+pymupdf
+requests
+plotly

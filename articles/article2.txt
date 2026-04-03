@@ -1,0 +1,191 @@
+Skip to content
+
+
+Register
+
+Sign In
+Home
+News
+Sport
+Business
+Technology
+Health
+Culture
+Arts
+Travel
+Earth
+Audio
+Video
+Live
+
+Palantir UK boss says it's up to militaries to decide how AI targeting is used in war
+16 hours ago
+
+Share
+
+Save
+
+Add as preferred on Google
+Marc Cieslak,AI correspondentandMatt Murphy,BBC Verify
+
+
+0:55
+Palantir's Louis Mosley says militaries responsible for how AI systems are used
+
+Tech giant Palantir has pushed back against concerns that military use of its AI platforms could lead to unforeseen risks, in an exclusive interview with the BBC, insisting that the way the technology is used is the responsibility of its military customers.
+
+It comes as experts have expressed concern over the use of Palantir's AI-powered defence platform - Maven Smart System - during wartime and its reported use in US attacks on Iran.
+
+Analysts have warned that the military's use of the platform, which helps personnel plan attacks, leaves little time for "meaningful verification" of its output and could lead to incorrect targets being hit.
+
+But the company's UK and Europe head, Louis Mosley, told the BBC in a wide-ranging interview that while AI platforms like Maven have been "instrumental" to the US management of the Iran war, responsibility for how their output is used must always remain "with the military organisation".
+
+"There's always a human in the loop, so there is always a human that makes the ultimate decision. That's the current set-up."
+
+The Maven Smart System was launched by the Pentagon in 2017 and is designed to speed up military targeting decisions by bringing together masses of data, including a range of intelligence, satellite and drone images.
+
+The system analyses this data and can then provide recommendations for targeting. It can also suggest the level of force to use based on the availability of personnel and military hardware, such as aircraft.
+
+But scrutiny has grown over the use of such tools in warfare. In February, the Pentagon announced that it would be phasing out Anthropic's Claude AI system - which helps to power Maven - after the company refused to allow use of its AI in autonomous weapons and surveillance. Palantir says alternatives can replace it.
+
+
+
+Since the war with Iran began in February, the US has reportedly used Maven to plan strikes across the country.
+
+
+
+0:26
+Demonstration footage of Palantir's Maven Smart System
+Pushed by the BBC on the risk that Maven might suggest incorrect targets - which could include civilians - Mosley insisted that the platform is only meant to serve as a guide to speed up the decision-making process for military personnel and that it should not be seen as an automated targeting system.
+
+"You could think of it as a support tool," Mosley said. "It's allowing them to synthesise vast amounts of information that previously they would have had to do manually one by one."
+
+However, Mosley deferred to individual militaries when challenged by the BBC on the risk of time-pressured commanders ordering their officers to take Maven's output as being rubber-stamped.
+
+"That's really a question for our military customers. They're the ones that decide the policy framework that determines who gets to make what decision," he said. "That's not our role."
+
+Since 28 February, the US has launched more than 11,000 strikes against Iran, many reportedly identified by Maven.
+
+Adm Brad Cooper, head of the US military in the Middle East, has hailed AI systems for helping officers "sift through vast amounts of data in seconds, so our leaders can cut through the noise and make smarter decisions faster than the enemy can react".
+
+
+AI firm Anthropic seeks weapons expert to stop users from 'misuse'
+OpenAI changes deal with US military after backlash
+Trump orders government to stop using Anthropic in battle over AI use
+But some worry AI's involvement in mission planning creates significant risks.
+
+"This prioritisation of speed and scale and the use of force then leaves very little time for meaningful verification of targets to make sure that they don't include civilian targets accidentally," Prof Elke Schwarz of Queen Mary University of London said.
+
+"If there's a risk of killing and you co-opt a lot of your critical thinking to software that will take care of these things for you, then you just become reliant on the software," she added. "It's a race to the bottom."
+
+In recent weeks, Pentagon officials have faced questions as to whether AI tools such as Maven were used to identify targets in the deadly strike on a school in the Iranian town of Minab. Iranian officials said the strike killed 168 people, including around 110 children, on the opening day of the war.
+
+In Congress, a number of senior Democrats have called for increased scrutiny of AI platforms like Maven. Rep Sara Jacobs - a member of the House Armed Services Committee - called for clearly enforced rules and regulations about how and when AI systems are used.
+
+"AI tools aren't 100% reliable — they can fail in subtle ways and yet operators continue to over-trust them," she told NBC News last month.
+
+"We have a responsibility to enforce strict guardrails on the military's use of AI and guarantee a human is in the loop in every decision to use lethal force, because the cost of getting it wrong could be devastating for civilians and the service members carrying out these missions."
+
+
+
+But Mosley pushed back against suggestions that the speed of his company's platform is rushing decision making at the Pentagon and potentially creating dangerous situations. He instead argued that the speed at which commanders are now taking action is a "consequence of the increased efficiency" that Maven has enabled.
+
+Citing "operational security", the Pentagon declined to comment when approached by the BBC on how AI systems like Maven will be used in future or who would be held responsible should something go wrong.
+
+But officials in the US appear to be moving forward with plans to further integrate Maven into its systems.
+
+Last week, the Reuters news agency reported that the Pentagon had designated Maven as "an official program of record" - establishing it as a technology to be integrated long-term across the US military.
+
+In a letter obtained by Reuters, deputy Defence Secretary Steve Feinberg said the platform would provide commanders "with the latest tools necessary to detect, deter, and dominate our adversaries in all domains".
+
+Additional reporting by Jemimah Herd
+
+
+Artificial intelligence
+Iran war
+Related
+Claude Code users hitting usage limits 'way faster than expected'
+Thousands lose their jobs in deep cuts at tech giant Oracle
+What could six fictional voters teach us about how social media really works?
+ADVERTISEMENT
+I turned down MMA fighter on a night out - so he punched me
+Anne Marie Boyle suffered a brain injury and subsequent seizures which led to her losing her business, her ability to drive and her confidence.
+Frances Obiefuleh death: Man guilty of murdering 'kind' girlfriend
+Frances Obiefuleh was suffocated by her boyfriend Norbert Maiksner in Havant, Hampshire.
+Man tried to stop rape as he filmed it, court hears
+Three men are facing a trial after an alleged rape on Brighton beach in October.
+Frances Obiefuleh death: Man jailed for life murdering girlfriend
+Norbert Maiksner has been jailed for life for murdering his girlfriend Frances Obiefuleh in Havant, Hampshire.
+Uber Eats delivery driver jailed for raping customer
+Jitendrakumar Prajapati struck up a conversation with the woman before attacking her on 19 January.
+Israel says it has killed Iran's navy chief overseeing Strait of Hormuz blockade
+Israel's defence minister said a number of other "senior Navy command officials" have also been killed. Iran has not yet commented.
+More from the BBC
+4 hrs ago
+Image shows Donald Trump
+Trump leaves key questions unanswered as he seeks to calm nerves over Iran war
+There were some glaring omissions in the president's primetime address, writes the BBC's Gary O'Donoghue.
+
+5 hrs ago
+President Donald Trump delivers an address at the White House on 1 April 2026
+Trump says Iran war objectives 'nearing completion' in address to nation
+Trump's first televised address of the conflict with Iran did little to quell uneasy markets.
+
+5 hrs ago
+Trump speaks during his televised address.
+Trump says US 'on the cusp' of ending Iran war in televised address
+The president also called on countries reliant on the Strait of Hormuz to 'build up the courage' to secure it.
+
+7 hrs ago
+US President Donald Trump speaks with the press as he meets with Indian Prime Minister Narendra Modi in the Oval Office of the White House in Washington, DC, on February 13, 2025. (Photo by Jim WATSON / AFP) (Photo by JIM WATSON/AFP via Getty Images)
+Pakistan's push in Iran war diplomacy - is India sidelined?
+Delhi is abuzz as Pakistan plays Iran go-between. Is India being sidelined in a shifting US-Iran equation?
+
+
+12 hrs ago
+A man in a white turban and black clothes brushes the area in front of a bombed out building
+Israel's perpetual war with Iran may be hard to win with military might alone
+The war with Iran has not yet resolved any of Israel's regional conflicts in the way its prime minister suggested it would.
+
+Home
+News
+Sport
+Business
+Technology
+Health
+Culture
+Arts
+Travel
+Earth
+Audio
+Video
+Live
+Weather
+BBC Shop
+BritBox
+BBC in other languages
+Follow BBC on:
+
+
+
+
+
+
+Terms of Use
+Subscription Terms
+About the BBC
+Privacy Policy
+Cookies
+Accessibility Help
+Contact the BBC
+Advertise with us
+Do not share or sell my info
+BBC.com Help & FAQs
+Content Index
+Set Preferred Source
+Copyright 2026 BBC. All rights reserved. The BBC is not responsible for the content of external sites. Read about our approach to external linking.
+
+ 
+
+
+

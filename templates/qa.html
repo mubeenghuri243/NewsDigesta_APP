@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% set active_nav = 'qa' %}
+
+{% block content %}
+<div class="qa-bg">
+  <div class="result-header">
+    <a href="{{ url_for('home') }}" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+    <div class="result-title">Ask AI</div>
+    <div class="hicon"><i class="fa-regular fa-bell"></i></div>
+  </div>
+
+  <!-- Info Card -->
+  <div class="qa-info-card">
+    <i class="fa-solid fa-robot qa-robot"></i>
+    <div class="qa-info-title">News Q&A</div>
+    <div class="qa-info-sub">Ask anything about the latest news you searched</div>
+  </div>
+
+  <!-- Answer Section -->
+  {% if answer %}
+  <div class="qa-answer-wrap">
+    <div class="qa-q-badge"><i class="fa-regular fa-circle-question"></i> Your Question</div>
+    <div class="qa-q-text">{{ question }}</div>
+    <div class="qa-a-badge"><i class="fa-solid fa-robot"></i> AI Answer</div>
+    <div class="qa-a-text">{{ answer }}</div>
+  </div>
+  {% endif %}
+
+  <!-- Question Form -->
+  <form action="{{ url_for('qa_page') }}" method="POST" class="qa-form">
+    <div class="qa-input-wrap">
+      <input type="text" name="question" placeholder="Ask about recent news..." class="qa-input"
+             value="{{ question if question else '' }}">
+      <button type="submit" class="qa-submit"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+  </form>
+
+  <!-- Suggested Questions -->
+  <div class="qa-suggestions">
+    <div class="qa-sug-title">Suggested Questions</div>
+    <div class="qa-sug-list">
+      <div class="qa-sug" onclick="fillQ(this)">What are the latest developments?</div>
+      <div class="qa-sug" onclick="fillQ(this)">Who are the key people involved?</div>
+      <div class="qa-sug" onclick="fillQ(this)">What is the global impact?</div>
+      <div class="qa-sug" onclick="fillQ(this)">What happens next?</div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function fillQ(el) {
+  document.querySelector('.qa-input').value = el.textContent;
+}
+</script>
+{% endblock %}
