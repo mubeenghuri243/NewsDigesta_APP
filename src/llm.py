@@ -1,6 +1,6 @@
 from src.config import GROQ_API_KEY
-from deep_translator import GoogleTranslator
-from langdetect import detect
+
+
 from groq import Groq 
 client=Groq(api_key=GROQ_API_KEY)
 def generate_response(query,retriever, session_context="", top_k=3):
